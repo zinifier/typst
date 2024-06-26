@@ -257,7 +257,7 @@ fn export_html(document: &HtmlDocument, config: &CompileConfig) -> SourceResult<
 }
 
 /// Export to a paged target format.
-fn export_paged(document: &PagedDocument, config: &CompileConfig) -> SourceResult<()> {
+pub fn export_paged(document: &PagedDocument, config: &CompileConfig) -> SourceResult<()> {
     match config.output_format {
         OutputFormat::Pdf => export_pdf(document, config),
         OutputFormat::Png => {
